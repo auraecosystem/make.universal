@@ -1,0 +1,5 @@
+{
+  "name": "python-dev",
+  "features": ["python", "git"],
+  "postCreate": "pip install -r requirements.txt"
+}
