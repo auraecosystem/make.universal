@@ -1,0 +1,17 @@
+{
+  "name": "makeuniversal-core",
+  "build": {
+    "dockerfile": "../base/Dockerfile"
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.vscode-json",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  },
+
+  "postCreateCommand": "bash scripts/install.sh"
+}
