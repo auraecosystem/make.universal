@@ -1,0 +1,50 @@
+digraph WEB4_BUILD {
+
+    rankdir=LR;
+    splines=true;
+    overlap=false;
+
+    node [shape=box style=filled];
+
+    User        [label="User / Client"];
+    CDN         [label="CDN / Edge"];
+    Nginx       [label="Nginx Reverse Proxy"];
+    FastAPI     [label="FastAPI API Gateway"];
+    AIEngine    [label="AI Engine"];
+    Wallet      [label="Swift Beta Wallet"];
+    Blockchain  [label="Fadaka Blockchain"];
+    Redis       [label="Redis Cache"];
+    Postgres    [label="PostgreSQL"];
+    Docker      [label="Docker Runtime"];
+    Kubernetes  [label="Kubernetes Cluster"];
+    GitHub      [label="GitHub Actions CI/CD"];
+    TLSMesh     [label="TLS P2P Mesh"];
+    WebSocket   [label="Realtime WebSocket Hub"];
+    Storage     [label="Object Storage"];
+    Monitoring  [label="Monitoring + Logs"];
+
+    User -> CDN;
+    CDN -> Nginx;
+    Nginx -> FastAPI;
+
+    FastAPI -> AIEngine;
+    FastAPI -> Wallet;
+    FastAPI -> Blockchain;
+    FastAPI -> Redis;
+    FastAPI -> Postgres;
+    FastAPI -> WebSocket;
+
+    Blockchain -> TLSMesh;
+
+    Docker -> Kubernetes;
+    GitHub -> Docker;
+
+    Kubernetes -> FastAPI;
+    Kubernetes -> Redis;
+    Kubernetes -> Postgres;
+
+    Monitoring -> Kubernetes;
+    Monitoring -> FastAPI;
+
+    Storage -> AIEngine;
+}
