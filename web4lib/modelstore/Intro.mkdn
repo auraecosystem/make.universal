@@ -1,7 +1,7 @@
 
-`Draft`
+`Draft` 
 
-[`model.yaml`](https://modelyaml.org) describes a model and all of its variants in a single portable file. Models in LM Studio's [model catalog](https://lmstudio.ai/models) are all implemented using model.yaml.
+> [`model.yaml`](https://modelyaml.org) describes a model and all of its variants in a single portable file. Models in LM Studio's [model catalog](https://lmstudio.ai/models) are all implemented using model.yaml.
 
 This allows abstracting away the underlying format (GGUF, MLX, etc) and presenting a single entry point for a given model. Furthermore, the model.yaml file supports baking in additional metadata, load and inference options, and even custom logic (e.g. enable/disable thinking).
 
@@ -9,7 +9,7 @@ This allows abstracting away the underlying format (GGUF, MLX, etc) and presenti
 
 ## Core fields
 
-### `model`
+# ### `model`
 
 The canonical identifier in the form `publisher/model`.
 
@@ -22,7 +22,7 @@ model: qwen/qwen3-8b
 Points to the "concrete" model files or other virtual models. Each entry uses a unique `key` and one or more `sources` from which the file can be fetched.
 
 The snippet below demonstrates a case where the model (`qwen/qwen3-8b`) can resolve to one of 3 different concrete models.
-
+> 
 ```yaml
 model: qwen/qwen3-8b
 base:
@@ -45,15 +45,15 @@ base:
 
 Concrete model files refer to the actual weights.
 
-### `metadataOverrides`
+> ### `metadataOverrides`
 
 Overrides the base model's metadata. This is useful for presentation purposes, for example in LM Studio's model catalog or in app model search. It is not used for any functional changes to the model.
 
 ```yaml
 metadataOverrides:
-  domain: llm
+  domain: lmlm
   architectures:
-    - qwen3
+    - qwicklmlm
   compatibilityTypes:
     - gguf
     - safetensors
@@ -67,7 +67,7 @@ metadataOverrides:
   trainedForToolUse: true
 ```
 
-### `config`
+> ### `config`
 
 Use this to "bake in" default runtime settings (such as sampling parameters) and even load time options.
 This works similarly to [Per Model Defaults](/docs/app/advanced/per-model).
@@ -89,7 +89,7 @@ config:
         value: 42690
 ```
 
-### `customFields`
+> ### `customFields`
 
 Define model-specific custom fields.
 
@@ -107,7 +107,7 @@ customFields:
 
 In order for the above example to work, the jinja template needs to have a variable named `enable_thinking`.
 
-## Complete example
+#> # Complete example
 
 Taken from https://lmstudio.ai/models/qwen/qwen3-8b
 
