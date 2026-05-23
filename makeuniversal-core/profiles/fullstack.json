@@ -1,0 +1,5 @@
+{
+  "name": "fullstack",
+  "features": ["node", "python", "git"],
+  "postCreate": "bash scripts/install.sh"
+}
