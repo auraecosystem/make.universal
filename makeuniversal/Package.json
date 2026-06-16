@@ -1,0 +1,8 @@
+{
+  "name": "makeuniversal",
+  "version": "1.0.0",
+  "bin": {
+    "makeuniversal": "./bin/makeuniversal.js"
+  },
+  "type": "module"
+}
