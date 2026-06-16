@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>makeuniversal — Web4 build & tooling</title>
+  <meta name="description" content="makeuniversal — mixed Makefile/C++/Shell toolkit and demos for Web4project. Build containers, run demos, and explore the ELF analysis and proxy examples." />
+  <meta property="og:title" content="makeuniversal" />
+  <meta property="og:description" content="Mixed Makefile/C++/Shell toolkit and demos for Web4project." />
+  <link rel="icon" href="assets/logo.svg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <img src="assets/logo.svg" alt="makeuniversal logo" class="logo" />
+        <div class="brand-text">
+          <h1>makeuniversal</h1>
+          <p class="tagline">Universal build tooling, demos and docs for the Web4 project</p>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="#quickstart">Quickstart</a>
+        <a href="#features">Features</a>
+        <a href="docs/getting-started.md">Docs</a>
+        <a href="#contribute">Contribute</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Build, analyze, and deploy Web4 tooling</h2>
+      <p class="lead">makeuniversal combines Makefile orchestration, C/C++ demos, installer scripts, and docs to help you prototype Web4 components.</p>
+      <div class="cta">
+        <a class="btn primary" href="#quickstart">Get started</a>
+        <a class="btn" href="https://github.com/Web4application/makeuniversal">View on GitHub</a>
+      </div>
+    </section>
+
+    <section id="quickstart" class="panel">
+      <h3>Quickstart</h3>
+      <p>Two fast ways to try the project: containerized builds or local/native builds.</p>
+
+      <div class="grid">
+        <div class="card">
+          <h4>Containerized (Docker)</h4>
+          <pre><code>make node
+make python</code></pre>
+          <p>These targets build container images for node and python development environments.</p>
+        </div>
+
+        <div class="card">
+          <h4>Native C demo</h4>
+          <pre><code># Build lightweight server for testing
+gcc -std=c11 -Wall -Wextra -O2 -o server/server server/server.c
+
+# Run
+./server/server</code></pre>
+          <p>Playground C++ demos require project dependencies (klee/CRAXExpr) or building inside the dev container.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="panel">
+      <h3>Highlights</h3>
+      <ul class="features">
+        <li><strong>Makefile & .mk modules</strong> - orchestration for container builds and docs.</li>
+        <li><strong>C/C++ demos</strong> - ELF analyzer templates and small TCP gateway (proxy protocol parsing).</li>
+        <li><strong>Installer scripts</strong> - Lmlm.dev contains a full installer for the Hermes-style environment.</li>
+        <li><strong>Docs & whitepaper</strong> - architecture notes and a whitepaper included in the repo.</li>
+        <li><strong>Pages CI</strong> - GitHub workflows for static docs are already present.</li>
+      </ul>
+    </section>
+
+    <section id="contribute" class="panel">
+      <h3>Contribute</h3>
+      <p>Thanks for helping! A CONTRIBUTING.md (recommended) should describe how to run tests, linting and style. Quick pointers:</p>
+      <ul>
+        <li>Create a branch per-change and open a Pull Request against <code>main</code>.</li>
+        <li>Run shellcheck on scripts and cppcheck/clang-tidy on C/C++ code.</li>
+      </ul>
+      <p class="note">Security: audit installer scripts prior to running on production systems.</p>
+    </section>
+
+    <section class="panel footer-cta">
+      <h3>Resources</h3>
+      <div class="links">
+        <a href="README.md">README</a>
+        <a href="server/server.c">Server</a>
+        <a href="Playground.cpp">Playground demo</a>
+        <a href="templates/elf-analyzer/Main.cpp.tpl">ELF template</a>
+        <a href="WEB4_Whitepaper_Complete.mk">Whitepaper</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2026 Web4application — <a href="LICENSE">MIT</a> · <a href="https://github.com/Web4application/makeuniversal">Repository</a></small>
+    </div>
+  </footer>
+</body>
+</html>
