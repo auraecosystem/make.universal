@@ -4,65 +4,22 @@ The GitBook developer platform allows developers to extend its capabilities with
 
 ### Discover the platform
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-type="image">Cover image (dark)</th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover-dark data-type="image">Cover image (dark)</th></tr></thead><tbody><tr><td><strong>Create an integration</strong></td><td>Build custom integrations in GitBook.</td><td><a href="https://2688147996-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2SyQSbIa1iYS7z6Dx5di%2Fuploads%2Fgit-blob-8bdfaa5f939f0d17faa1da4beb0071f3e0774d01%2FNode.js.svg?alt=media">Node.js.svg</a></td><td><a href="https://2688147996-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2SyQSbIa1iYS7z6Dx5di%2Fuploads%2Fz5SvZSImduS2fFoKsGx2%2Fcreate-an-integration.png?alt=media&#x26;token=76802f76-0821-4478-b812-19d5e150a2d9">create-an-integration.png</a></td><td><a href="integrations/quickstart">quickstart</a></td><td><a href="https://2688147996-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2SyQSbIa1iYS7z6Dx5di%2Fuploads%2FEZknW2N3cCMPnFjL6wRn%2Fcreate-an-integration-1.png?alt=media&#x26;token=7fe79a28-ec8e-4b1c-98dc-0c8690114245">create-an-integration-1.png</a></td></tr><tr><td><strong>Use the API</strong></td><td>Explore the GitBook API.</td><td><a href="https://2688147996-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2SyQSbIa1iYS7z6Dx5di%2Fuploads%2Fgit-blob-fd33379177b7c358cd9e789478e56da78c00b1ba%2FGitBook%20API.svg?alt=media">GitBook API.svg</a></td><td><a href="https://2688147996-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2SyQSbIa1iYS7z6Dx5di%2Fuploads%2Fx8tStb3jklfqK4UZtlel%2Fuse-the-api.png?alt=media&#x26;token=22a8ee52-0bef-45f5-af75-78e78660399e">use-the-api.png</a></td><td><a href="gitbook-api/api-reference">api-reference</a></td><td><a href="https://2688147996-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2SyQSbIa1iYS7z6Dx5di%2Fuploads%2FhmKlx1r3CPZ6u0sjopP3%2Fuse-the-api-1.png?alt=media&#x26;token=7dca049d-97f0-4f5f-b3e6-59fc50e99dd3">use-the-api-1.png</a></td></tr><tr><td><strong>Work with the CLI</strong></td><td>Install the CLI to interact with the developer platform.</td><td><a href="https://2688147996-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2SyQSbIa1iYS7z6Dx5di%2Fuploads%2Fgit-blob-fc6d3a894ecf99d55e18660aff8d96bb26eec2c5%2FCLI.svg?alt=media">CLI.svg</a></td><td><a href="https://2688147996-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2SyQSbIa1iYS7z6Dx5di%2Fuploads%2F0J6qRA0Ozk9NrjoRwMqZ%2Fcli.png?alt=media&#x26;token=9c4f1692-924e-47ff-b125-dbb7efb4c35b">cli.png</a></td><td><a href="integrations/reference">reference</a></td><td><a href="https://2688147996-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2SyQSbIa1iYS7z6Dx5di%2Fuploads%2FYNQvMGQo6LIdrV18bc26%2Fcli-1.png?alt=media&#x26;token=7947d214-c10b-4bc3-8b5f-1b3f231d5c3f">cli-1.png</a></td></tr>     
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-type="image">Cover image (dark)</th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover-dark data-type="image">Cover image (dark)</th></tr></thead><tbody><tr><td><strong>Create an integration</strong></td><td>Build custom integrations in GitBook.</td><td><a href="https://2688147996-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2SyQSbIa1iYS7z6Dx5di%2Fuploads%2Fgit-blob-8bdfaa5f939f0d17faa1da4beb0071f3e0774d01%2FNode.js.svg?alt=media">Node.js.svg</a></td><td><a href="https://2688147996-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2SyQSbIa1iYS7z6Dx5di%2Fuploads%2Fz5SvZSImduS2fFoKsGx2%2Fcreate-an-integration.png?alt=media&#x26;token=76802f76-0821-4478-b812-19d5e150a2d9">create-an-integration.png</a></td><td><a href="integrations/quickstart">quickstart</a></td><td><a href="https://2688147996-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2SyQSbIa1iYS7z6Dx5di%2Fuploads%2FEZknW2N3cCMPnFjL6wRn%2Fcreate-an-integration-1.png?alt=media&#x26;token=7fe79a28-ec8e-4b1c-98dc-0c8690114245">create-an-integration-1.png</a></td></tr><tr><td><strong>Use the API</strong></td><td>Explore the GitBook API.</td><td><a href="https://2688147996-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2SyQSbIa1iYS7z6Dx5di%2Fuploads%2Fgit-blob-fd33379177b7c358cd9e789478e56da78c00b1ba%2FGitBook%20API.svg?alt=media">GitBook API.svg</a></td><td><a href="https://2688147996-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2SyQSbIa1iYS7z6Dx5di%2Fuploads%2Fx8tStb3jklfqK4UZtlel%2Fuse-the-api.png?alt=media&#x26;token=22a8ee52-0bef-45f5-af75-78e78660399e">use-the-api.png</a></td><td><a href="gitbook-api/api-reference">api-reference</a></td><td><a href="https://2688147996-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2SyQSbIa1iYS7z6Dx5di%2Fuploads%2FhmKlx1r3CPZ6u0sjopP3%2Fuse-the-api-1.png?alt=media&#x26;token=7dca049d-97f0-4f5f-b3e6-59fc50e99dd3">use-the-api-1.png</a></td></tr><tr><td><strong>Work with the CLI</strong></td><td>Install the CLI to interact with the developer platform.</td><td><a href="https://2688147996-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2SyQSbIa1iYS7z6Dx5di%2Fuploads%2Fgit-blob-fc6d3a894ecf99d55e18660aff8d96bb26eec2c5%2FCLI.svg?alt=media">CLI.svg</a></td><td><a href="https://2688147996-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2SyQSbIa1iYS7z6Dx5di%2Fuploads%2F0J6qRA0Ozk9NrjoRwMqZ%2Fcli.png?alt=media&#x26;token=9c4f1692-924e-47ff-b125-dbb7efb4c35b">cli.png</a></td><td><a href="integrations/reference">reference</a></td><td><a href="https://2688147996-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2SyQSbIa1iYS7z6Dx5di%2Fuploads%2FYNQvMGQo6LIdrV18bc26%2Fcli-1.png?alt=media&#x26;token=7947d214-c10b-4bc3-8b5f-1b3f231d5c3f">cli-1.png</a></td></tr></tbody></table>    
  
-  ```dot
-graph WEB4_CYBERPUNK {
+# Web4 System Architecture
 
-    layout=sfdp;
-    overlap=false;
-    splines=true;
-    sep=1.4;
-    repulsiveforce=2;
+## Live System Map
 
-    node [
-        shape=box,
-        style="filled,rounded",
-        fillcolor="#111827",
-        fontcolor="white",
-        color="#00ffff"
-    ];
+```mermaid
+flowchart LR
+User --> CDN --> Nginx --> FastAPI
+FastAPI --> AIEngine
+FastAPI --> Wallet
+FastAPI --> Blockchain
+FastAPI --> Redis
+FastAPI --> Postgres
+FastAPI --> WebSocket
+Blockchain --> TLSMesh
+GitHub --> Docker --> Kubernetes
+Storage --> AIEngine`
 
-    edge [
-        color="#00ffff",
-        penwidth=1.2
-    ];
-
-    User        [label="USER"];
-    CDN         [label="EDGE CDN"];
-    Nginx       [label="NGINX"];
-    FastAPI     [label="FASTAPI GATEWAY"];
-    AIEngine    [label="AI ENGINE"];
-    Wallet      [label="SWIFT WALLET"];
-    Blockchain  [label="FADAKA CHAIN"];
-    Redis       [label="REDIS CACHE"];
-    Postgres    [label="POSTGRES DB"];
-    WebSocket   [label="REALTIME HUB"];
-    TLSMesh     [label="P2P TLS MESH"];
-    Storage     [label="OBJECT STORAGE"];
-    Kubernetes  [label="K8S CLUSTER"];
-    Docker      [label="DOCKER"];
-    GitHub      [label="CI/CD"];
-
-    User -- CDN -- Nginx -- FastAPI;
-
-    FastAPI -- AIEngine;
-    FastAPI -- Wallet;
-    FastAPI -- Blockchain;
-    FastAPI -- Redis;
-    FastAPI -- Postgres;
-    FastAPI -- WebSocket;
-
-    Blockchain -- TLSMesh;
-
-    GitHub -- Docker -- Kubernetes;
-
-    Kubernetes -- FastAPI;
-    Kubernetes -- Redis;
-    Kubernetes -- Postgres;
-
-    Storage -- AIEngine;
-}
-   ```
-
-</tbody></table>
