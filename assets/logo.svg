@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="makeuniversal">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#6DD3FF"/>
+      <stop offset="1" stop-color="#6dd3a8"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="160" rx="20" fill="#071426"/>
+  <g transform="translate(20,20)">
+    <rect width="120" height="120" rx="14" fill="url(#g)" opacity="0.12"/>
+    <g transform="translate(18,18)">
+      <rect width="84" height="84" rx="10" fill="#071426" stroke="url(#g)" stroke-width="4"/>
+      <text x="42" y="52" font-family="Inter, Arial" font-size="28" fill="#6DD3FF" text-anchor="middle" alignment-baseline="middle">MU</text>
+    </g>
+  </g>
+</svg>
