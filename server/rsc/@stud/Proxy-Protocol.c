@@ -6,6 +6,7 @@
 #include <netinet/in.h>
 #include <stdint.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 #define PROXY_V2_SIG "\r\n\r\n\0\r\nQUIT\n"
 #define PROXY_V2_SIG_LEN 12
@@ -144,7 +145,7 @@ int read_evt(int fd)
     }
 
     /* =========================
-       PROXY v1 detection
+       PROXY v1 detection (robust parsing)
        ========================= */
     if (ret >= 8 && memcmp(hdr.v1.line, "PROXY", 5) == 0)
     {
@@ -158,15 +159,66 @@ int read_evt(int fd)
         if (size > ret || size > 108)
             return -1;
 
-        hdr.v1.line[size - 1] = '\0';
+        /* copy into a local, NUL-terminated buffer for safe parsing */
+        char line[109];
+        memcpy(line, hdr.v1.line, size);
+        line[size - 1] = '\0'; /* strip final LF */
 
-        /* NOTE:
-           In production you should parse with strict tokenizer:
-           - inet_pton
-           - sscanf with bounds
-        */
+        /* PROXY v1 forms:
+         *  - "PROXY UNKNOWN\r\n"
+         *  - "PROXY TCP4 <SRC> <DST> <SPORT> <DPORT>\r\n"
+         *  - "PROXY TCP6 <SRC> <DST> <SPORT> <DPORT>\r\n"
+         * We parse conservatively using bounded sscanf and inet_pton.
+         */
 
-        goto consume;
+        char proto[16] = {0};
+        char src[64] = {0};
+        char dst[64] = {0};
+        int sport = 0, dport = 0;
+
+        int tokens = sscanf(line, "PROXY %15s %63s %63s %d %d", proto, src, dst, &sport, &dport);
+
+        if (tokens < 1)
+            return -1;
+
+        /* "UNKNOWN" -> accept and use kernel-provided address */
+        if (strcmp(proto, "UNKNOWN") == 0) {
+            goto consume;
+        }
+
+        if (strcmp(proto, "TCP4") == 0 || strcmp(proto, "TCP") == 0) {
+            if (tokens != 5) return -1; /* require ports for TCP */
+
+            struct in_addr in_src, in_dst;
+            if (inet_pton(AF_INET, src, &in_src) != 1) return -1;
+            if (inet_pton(AF_INET, dst, &in_dst) != 1) return -1;
+
+            if (sport < 0 || sport > 65535 || dport < 0 || dport > 65535) return -1;
+
+            set_ipv4(&from, in_src.s_addr, htons((uint16_t)sport));
+            set_ipv4(&to,   in_dst.s_addr, htons((uint16_t)dport));
+
+            goto consume;
+        }
+        else if (strcmp(proto, "TCP6") == 0) {
+            if (tokens != 5) return -1;
+
+            uint8_t in_src6[16];
+            uint8_t in_dst6[16];
+            if (inet_pton(AF_INET6, src, in_src6) != 1) return -1;
+            if (inet_pton(AF_INET6, dst, in_dst6) != 1) return -1;
+
+            if (sport < 0 || sport > 65535 || dport < 0 || dport > 65535) return -1;
+
+            set_ipv6(&from, in_src6, htons((uint16_t)sport));
+            set_ipv6(&to,   in_dst6, htons((uint16_t)dport));
+
+            goto consume;
+        }
+        else {
+            /* Unknown transport/proto */
+            return -1;
+        }
     }
 
     /* Unknown protocol → reject */
