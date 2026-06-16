@@ -1,0 +1,52 @@
+name: CI
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build & Test (matrix)
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        compiler: [gcc, clang]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential pkg-config ca-certificates \
+            cppcheck shellcheck python3 python3-pip
+          if [ "${{ matrix.compiler }}" = "clang" ]; then
+            sudo apt-get install -y clang clang-tidy
+          else
+            sudo apt-get install -y clang-tidy
+          fi
+
+      - name: Build server and tests
+        env:
+          CC: ${{ matrix.compiler }}
+        run: |
+          mkdir -p build
+          echo "Using compiler: $CC"
+          $CC -std=c11 -Wall -Wextra -O2 -o server/server server/server.c
+          $CC -std=c11 -Wall -Wextra -O2 -o server/tests/proxy_test server/tests/proxy_test.c server/rsc/@stud/Proxy-Protocol.c
+
+      - name: Static analysis (cppcheck)
+        run: |
+          cppcheck --enable=warning,style --inline-suppr --suppress=missingIncludeSystem server server/rsc || true
+
+      - name: Shellcheck (scripts)
+        run: |
+          shellcheck -x Lmlm.dev/*.sh || true
+
+      - name: Run tests
+        run: |
+          ./server/tests/proxy_test
