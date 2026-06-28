@@ -42,3 +42,8 @@ docker run -d -e JUPYTER_PASSWORD="mypassword" \
   unsloth/unsloth
 -v C:\Users\YourName\work:/workspace/work
 -v $(pwd)/work:/workspace/work
+# Preview script requirements
+cat Lmlm.dev/install.sh
+
+# Run script
+bash Lmlm.dev/install.sh
