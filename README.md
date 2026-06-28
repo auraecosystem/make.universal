@@ -60,7 +60,7 @@ Contributing
 Contact
 
 - Repo:
--  >https://github.com/auraecosystem/makeuniversal
+-  >https://github.com/web4application/makeuniversal.git
 
 ```make.universal/bash.sh
 ├── Makefile
