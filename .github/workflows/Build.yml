@@ -1,0 +1,114 @@
+version: 1
+
+project:
+  name: swift_Concurrency
+  type: library
+  output:
+    - static
+    - shared
+
+languages:
+  - cpp
+  - c
+  - swift
+
+toolchains:
+  cpp:
+    compiler: auto
+    standard: c++20
+
+  swift:
+    compiler: auto
+    parse_stdlib: true
+    strict_memory_safety: true
+
+architectures:
+  auto: true
+  supported:
+    - x86_64
+    - arm64
+    - arm64e
+    - wasm32
+
+platforms:
+
+  darwin:
+    executor: dispatch
+    async_frame_pointer: always
+
+  linux:
+    executor: dispatch
+
+  windows:
+    executor: none
+    system_libs:
+      - Synchronization
+      - mincore
+
+sources:
+
+  cpp:
+    include:
+      - "**/*.cpp"
+
+    exclude:
+      - Tests/**
+      - Experimental/**
+
+  c:
+    include:
+      - "**/*.c"
+
+  swift:
+    include:
+      - "**/*.swift"
+
+generated:
+  gyb:
+    - Task+init.swift.gyb
+    - TaskGroup+addTask.swift.gyb
+    - Task+immediate.swift.gyb
+
+compile:
+
+  cpp:
+    defines:
+      - __STDC_WANT_LIB_EXT1__=1
+
+  swift:
+    experimental:
+      - IsolatedAny
+      - AllowUnsafeAttribute
+      - Extern
+
+link:
+
+  libraries:
+    dispatch:
+      when:
+        executor: dispatch
+
+install:
+
+  headers:
+    - ExecutorImpl.h
+
+  library: lib/
+  include: include/
+
+embedded:
+
+  enabled: true
+
+  strip:
+    - reflection
+    - objc
+    - tracing
+
+  executor: cooperative
+
+package:
+
+  framework: true
+  static: true
+  shared: true
