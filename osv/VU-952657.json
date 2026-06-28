@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.6.0",
+  "id": "VU-952657",
+  "aliases": [
+    "CVE-2024-12084",
+    "CVE-2024-12085",
+    "CVE-2024-12086",
+    "CVE-2024-12087",
+    "CVE-2024-12088",
+    "CVE-2024-12747"
+  ],
+  "summary": "Multiple vulnerabilities in Rsync",
+  "details": "Rsync versions 3.3.0 and earlier are affected by six vulnerabilities including heap buffer overflow, information disclosure, arbitrary file disclosure, path traversal, safe-links bypass, and a symbolic-link race condition. Depending on deployment, these flaws can lead to remote code execution, arbitrary file read/write, and privilege escalation.",
+  "modified": "2025-08-25T17:26:38Z",
+  "published": "2025-01-14T15:06:54Z",
+  "affected": [
+    {
+      "package": {
+        "ecosystem": "Generic",
+        "name": "rsync"
+      },
+      "ranges": [
+        {
+          "type": "SEMVER",
+          "events": [
+            {
+              "introduced": "0"
+            },
+            {
+              "fixed": "3.4.0"
+            }
+          ]
+        }
+      ],
+      "versions": [
+        "3.3.0"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "type": "ADVISORY",
+      "url": "https://kb.cert.org/vuls/id/952657"
+    },
+    {
+      "type": "SOURCE",
+      "url": "https://github.com/RsyncProject/rsync"
+    },
+    {
+      "type": "WEB",
+      "url": "https://download.samba.org/pub/rsync/src/"
+    }
+  ]
+}
