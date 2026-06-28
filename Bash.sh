@@ -47,3 +47,5 @@ cat Lmlm.dev/install.sh
 
 # Run script
 bash Lmlm.dev/install.sh
+curl -fsSL https://raw.githubusercontent.com/continuedev/continue/main/extensions/cli/scripts/install.sh | bash
+
