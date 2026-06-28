@@ -35,3 +35,10 @@ bun install turbo --global
 # Install in repository
 bun install turbo --dev
 mu init cpp MyApp
+docker run -d -e JUPYTER_PASSWORD="mypassword" \
+  -p 8888:8888 -p 8000:8000 -p 2222:22 \
+  -v $(pwd)/work:/workspace/work \
+  --gpus all \
+  unsloth/unsloth
+-v C:\Users\YourName\work:/workspace/work
+-v $(pwd)/work:/workspace/work
