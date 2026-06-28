@@ -34,3 +34,4 @@ pnpm add turbo --save-dev --workspace-root
 bun install turbo --global
 # Install in repository
 bun install turbo --dev
+mu init cpp MyApp
