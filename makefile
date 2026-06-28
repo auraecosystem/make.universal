@@ -1,8 +1,8 @@
 node:
-	docker build -f images/node.Dockerfile -t makeuniversal-node .
+	docker build -f images/node.Dockerfile -t make.universal-node .
 
 python:
-	docker build -f images/python.Dockerfile -t makeuniversal-python .
+	docker build -f images/python.Dockerfile -t make.universal-python .
 
 clean:
 	docker system prune -af
