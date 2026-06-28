@@ -21,3 +21,16 @@ less Lmlm.dev/install.sh
 docker run --rm -it -v "$(pwd)":/work -w /work ubuntu:24.04 bash
 apt-get update && apt-get install -y curl python3
 bash Lmlm.dev/install.sh
+"git clone" https://github.com/auraecosystem/make.universe.git
+cd make.universe
+"git clone" https://github.com/auraecosystem/turbo.build.git
+cd turbo.build
+# Global install
+pnpm add turbo --global
+# Install in repository
+pnpm add turbo --save-dev --workspace-root
+
+# Global install
+bun install turbo --global
+# Install in repository
+bun install turbo --dev
