@@ -4,7 +4,7 @@
 #include <klee/Expr.h>
 #include "CRAXExpr.h"   // the header you shared
 
-using namespace kubu;
+using namespace make.universal;
 
 int main() {
     // 1. ConstantExpr + AddExpr
