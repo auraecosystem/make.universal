@@ -1,1 +1,142 @@
-
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "make.universal Security Scanner",
+          "organization": "Aura Ecosystem",
+          "semanticVersion": "1.0.0",
+          "informationUri": "https://github.com/auraecosystem/make.universal",
+          "rules": [
+            {
+              "id": "CVE-2024-12084",
+              "name": "Heap Buffer Overflow",
+              "shortDescription": {
+                "text": "Heap buffer overflow in Rsync."
+              },
+              "help": {
+                "text": "Update Rsync to a patched release."
+              },
+              "properties": {
+                "severity": "error",
+                "tags": ["security", "rsync", "memory-corruption", "cve"]
+              }
+            },
+            {
+              "id": "CVE-2024-12085",
+              "name": "Information Leak",
+              "shortDescription": {
+                "text": "Uninitialized memory disclosure."
+              },
+              "help": {
+                "text": "Upgrade to the latest patched Rsync version."
+              },
+              "properties": {
+                "severity": "warning",
+                "tags": ["security", "information-disclosure"]
+              }
+            },
+            {
+              "id": "CVE-2024-12086",
+              "name": "Arbitrary File Disclosure",
+              "shortDescription": {
+                "text": "Malicious server may recover client file contents."
+              },
+              "help": {
+                "text": "Synchronize only with trusted servers and update Rsync."
+              },
+              "properties": {
+                "severity": "error"
+              }
+            },
+            {
+              "id": "CVE-2024-12087",
+              "name": "Path Traversal",
+              "shortDescription": {
+                "text": "Symlink handling allows writes outside the destination directory."
+              },
+              "help": {
+                "text": "Upgrade Rsync and validate synchronization endpoints."
+              },
+              "properties": {
+                "severity": "error"
+              }
+            },
+            {
+              "id": "CVE-2024-12088",
+              "name": "Safe-links Bypass",
+              "shortDescription": {
+                "text": "Nested symbolic links bypass --safe-links."
+              },
+              "help": {
+                "text": "Install the patched Rsync release."
+              },
+              "properties": {
+                "severity": "warning"
+              }
+            },
+            {
+              "id": "CVE-2024-12747",
+              "name": "Symbolic Link Race Condition",
+              "shortDescription": {
+                "text": "Race condition may permit privilege escalation."
+              },
+              "help": {
+                "text": "Upgrade to the patched version and restrict access."
+              },
+              "properties": {
+                "severity": "error"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "CVE-2024-12084",
+          "level": "error",
+          "message": {
+            "text": "Detected use of an affected Rsync version vulnerable to heap buffer overflow."
+          }
+        },
+        {
+          "ruleId": "CVE-2024-12085",
+          "level": "warning",
+          "message": {
+            "text": "Detected use of an affected Rsync version vulnerable to information disclosure."
+          }
+        },
+        {
+          "ruleId": "CVE-2024-12086",
+          "level": "error",
+          "message": {
+            "text": "Detected use of an affected Rsync version vulnerable to arbitrary file disclosure."
+          }
+        },
+        {
+          "ruleId": "CVE-2024-12087",
+          "level": "error",
+          "message": {
+            "text": "Detected use of an affected Rsync version vulnerable to path traversal."
+          }
+        },
+        {
+          "ruleId": "CVE-2024-12088",
+          "level": "warning",
+          "message": {
+            "text": "Detected use of an affected Rsync version vulnerable to safe-links bypass."
+          }
+        },
+        {
+          "ruleId": "CVE-2024-12747",
+          "level": "error",
+          "message": {
+            "text": "Detected use of an affected Rsync version vulnerable to a symbolic-link race condition."
+          }
+        }
+      ]
+    }
+  ]
+}
