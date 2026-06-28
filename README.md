@@ -59,4 +59,19 @@ Contributing
 
 Contact
 
-- Repo: https://github.com/Web4application/makeuniversal
+- Repo:
+-  >https://github.com/auraecosystem/makeuniversal
+
+```make.universal/bash.sh
+├── Makefile
+├── mu                 # CLI
+├── mk/                # Core build modules
+├── plugins/
+├── scanners/
+├── analyzers/
+├── security/
+├── package/
+├── release/
+├── docs/
+├── examples/
+└── tests/
