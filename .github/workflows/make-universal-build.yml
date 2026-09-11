@@ -1,0 +1,23 @@
+name: make.universal build
+
+on:
+  push:
+    branches:
+      - Makeuniversal.github.io
+      - repair/**
+  pull_request:
+    branches:
+      - Makeuniversal.github.io
+
+jobs:
+  build-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: make build
+
+      - name: Verify
+        run: make verify

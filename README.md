@@ -1,8 +1,11 @@
 # makeuniversal
 
 makeuniversal is a mixed build/tooling repository containing C/C++ demos, Makefile-based build orchestration, installer scripts, templates, and documentation for the Web4 project ecosystem.
-
-This README provides a brief overview and quickstart to get developers started.
+[make.universe](index.html)
+This README provides a brief overview and 
+[QuickStart](https://continue.dev/)
+[servers](https://mcpservers.org/)
+to get [developers](curlhub.sh) started.
 
 ## Contents
 
@@ -32,6 +35,9 @@ Build (native)
 - The repo contains multiple .mk files and a top-level `makefile` that orchestrates container builds. If you prefer to build native C/C++ components, inspect `Cmakelists.txt` and `src/` or use `makeuniversal-core` subdirectory's build instructions.
 
 Run the demo server
+[ottermindAi](https://ottermind.ai/auth?redirect=%2Fstudio%2Finstall-mcp-from-docs%3Fdoc%3Dhttps%253A%252F%252Fgithub.com%252Fkuberstar%252Fqartez-mcp%26name%3DQartez%2BMCP%26ref%3Dmcpservers)
+
+[server](crt.sh)
 
 - A simple TCP gateway is provided at `server/server.c`. To run (after building):
   ./server/server
