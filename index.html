@@ -1,6 +1,51 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071018">
+  <meta name="description" content="make.universe — a universal build surface for Web4 tooling, cross-platform builds, security, packaging and release automation.">
+  <meta property="og:title" content="make.universe — Universal Build Infrastructure">
+  <meta property="og:description" content="Build, verify, package and ship from one universal toolchain.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/auraecosystem/make.universe">
+  <meta property="og:image" content="assets/logo.svg">
+  <title>make.universe — Universal Build Infrastructure</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="nav shell" aria-label="Primary navigation">
+    <a class="brand" href="#top" aria-label="make.universe home"><img src="assets/logo.svg" alt="" width="42" height="42"><span><strong>make.universe</strong><small>WEB4 / BUILD INFRASTRUCTURE</small></span></a>
+    <div class="nav-links"><a href="#quickstart">Quickstart</a><a href="#architecture">Architecture</a><a href="#security">Security</a><a href="#resources">Docs</a><a class="nav-github" href="https://github.com/auraecosystem/make.universe" target="_blank" rel="noopener">GitHub ↗</a></div>
+    <button id="theme-toggle" class="icon-button" type="button" aria-label="Toggle theme">◐</button>
+  </nav></header>
+
+  <main id="main">
+    <section id="top" class="hero shell"><div class="hero-copy">
+      <p class="eyebrow"><span class="pulse"></span> UNIVERSAL TOOLCHAIN ONLINE</p><h1>One build surface.<br><em>Every target.</em></h1>
+      <p class="hero-lead">make.universe turns build configuration, native compilation, containers, testing, security, packaging and release into one inspectable workflow.</p>
+      <div class="actions"><a class="button primary" href="#quickstart">Start building</a><a class="button" href="https://github.com/auraecosystem/make.universe" target="_blank" rel="noopener">Open repository ↗</a></div>
+      <div class="signal-row"><span>BUILD</span><span>VERIFY</span><span>SECURE</span><span>PACKAGE</span><span>RELEASE</span></div>
+    </div><div class="terminal-wrap"><div class="terminal"><div class="terminal-bar"><span></span><span></span><span></span><label>make.universe / shell</label></div><pre><code><b>$</b> make help
+
+Targets
+  all        build everything
+  build      node + python images
+  verify     validate build.mu + Dockerfiles
+  test       run project tests
+  security   CVE + OSV + SBOM + SARIF
+  package    create release archives
+  release    verify → secure → package → publish
+
+<b class="ok">● universal pipeline ready</b></code></pre></div><div class="terminal-glow"></div></div></section>
+
+    <section class="metrics shell"><div><strong>3</strong><span>target platforms</span></div><div><strong>2</strong><span>container images</span></div><div><strong>4</strong><span>artifact classes</span></div><div><strong>7</strong><span>security controls</span></div><div><strong>2</strong><span>checksums</span></div></section>
+
+    <section id="quickstart" class="section shell"><div class="section-head"><p class="eyebrow">01 / QUICKSTART</p><h2>From clone to verified build.</h2><p>Use the production Makefile for the project pipeline, or use <code>build.mu</code> as the declarative universal specification.</p></div>
+      <div class="command-grid"><article class="command-card"><span>01</span><h3>Build containers</h3><p>Build the Node and Python development images.</p><button data-command="make build">make build</button></article><article class="command-card"><span>02</span><h3>Verify configuration</h3><p>Check <code>build.mu</code>, Dockerfiles and build configuration.</p><button data-command="make verify">make verify</button></article><article class="command-card"><span>03</span><h3>Run quality gates</h3><p>Format, lint, test and verify before release.</p><button data-command="make format &amp;&amp; make lint &amp;&amp; make test">make lint &amp;&amp; make test</button></article><article class="command-card"><span>04</span><h3>Run security</h3><p>Generate vulnerability, SBOM and SARIF reporting.</p><button data-command="make security">make security</button></article></div>
+      <div class="copy-console" aria-live="polite"><span>$</span><code id="command-output">make verify</code><button id="copy-command" type="button">Copy</button></div>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>makeuniversal | Web4 build & tooling</title>
@@ -39,67 +84,16 @@
       </div>
     </section>
 
-    <section id="quickstart" class="panel">
-      <h3>Quickstart</h3>
-      <p>Two fast ways to try the project: containerized builds or local/native builds.</p>
+    <section id="architecture" class="section section-dark"><div class="shell"><div class="section-head"><p class="eyebrow">02 / ARCHITECTURE</p><h2>The specification is the map.</h2><p>The checked-in <code>build.mu</code> describes project identity, language rules, sources, outputs, platforms, testing, security, containers, packages and release policy.</p></div><div class="architecture-grid"><div class="arch-node active"><b>build.mu</b><small>declarative source of truth</small></div><div class="arch-arrow">→</div><div class="arch-stack"><div><b>Compiler</b><small>clang / C17 / O2</small></div><div><b>Platforms</b><small>macOS · Linux · Windows</small></div><div><b>Containers</b><small>Node · Python</small></div></div><div class="arch-arrow">→</div><div class="arch-stack"><div><b>Quality</b><small>CTest · coverage · verify</small></div><div><b>Security</b><small>CVE · OSV · SBOM · SARIF</small></div><div><b>Release</b><small>sign · provenance · checksums</small></div></div></div></div></section>
 
-      <div class="grid">
-        <div class="card">
-          <h4>Containerized (Docker)</h4>
-          <pre><code>make node
-make python</code></pre>
-          <p>These targets build container images for node and python development environments.</p>
-        </div>
+    <section id="security" class="section shell"><div class="security-layout"><div><p class="eyebrow">03 / SECURITY</p><h2>Security is a build stage, not a postscript.</h2><p>The specification enables scanning, CVE and OSV checks, SBOM and SARIF generation, secret and license checks, with a critical-severity failure threshold.</p><a class="text-link" href="https://github.com/auraecosystem/make.universe/blob/main/build.mu" target="_blank" rel="noopener">Inspect build.mu ↗</a></div><div class="security-console"><div class="console-title"><span>SECURITY PIPELINE</span><b>POLICY: CRITICAL</b></div><ul><li><span>✓</span> vulnerability scan</li><li><span>✓</span> CVE intelligence</li><li><span>✓</span> OSV intelligence</li><li><span>✓</span> SBOM generation</li><li><span>✓</span> SARIF output</li><li><span>✓</span> secrets inspection</li><li><span>✓</span> license inspection</li></ul></div></div></section>
 
-        <div class="card">
-          <h4>Native C demo</h4>
-          <pre><code># Build lightweight server for testing
-gcc -std=c11 -Wall -Wextra -O2 -o server/server server/server.c
+    <section class="section shell status-section"><div class="status-card"><div><p class="eyebrow">LIVE REPOSITORY SIGNAL</p><h2 id="repo-status">Checking GitHub…</h2><p id="repo-meta">Reading the public repository workflow state.</p></div><a class="button" href="https://github.com/auraecosystem/make.universe/actions" target="_blank" rel="noopener">View Actions ↗</a></div></section>
 
-# Run
-./server/server</code></pre>
-          <p>Playground C++ demos require project dependencies (klee/CRAXExpr) or building inside the dev container.</p>
-        </div>
-      </div>
-    </section>
+    <section id="resources" class="section shell"><div class="section-head"><p class="eyebrow">04 / RESOURCES</p><h2>Everything stays close to the source.</h2></div><div class="resource-grid"><a href="README.md"><b>README</b><span>Project overview, workflow and contribution path.</span></a><a href="build.mu"><b>build.mu</b><span>Universal build specification v1.</span></a><a href="Docs/Getting-started.md"><b>Getting started</b><span>Developer onboarding and first steps.</span></a><a href="Docs/Dev.html.md"><b>Developer docs</b><span>Development notes and implementation context.</span></a><a href="Docs/api.md"><b>API</b><span>Project API reference.</span></a><a href="makefile"><b>Makefile</b><span>Production build, test, security and release targets.</span></a><a href="server/server.c"><b>C gateway</b><span>Native TCP gateway implementation.</span></a><a href=".github/workflows/Ci.yml"><b>CI workflow</b><span>Repository automation.</span></a></div></section>
 
-    <section id="features" class="panel">
-      <h3>Highlights</h3>
-      <ul class="features">
-        <li><strong>Makefile & .mk modules</strong> - orchestration for container builds and docs.</li>
-        <li><strong>C/C++ demos</strong> - ELF analyzer templates and small TCP gateway (proxy protocol parsing).</li>
-        <li><strong>Installer scripts</strong> - Lmlm.dev contains a full installer for the Hermes-style environment.</li>
-        <li><strong>Docs & whitepaper</strong> - architecture notes and a whitepaper included in the repo.</li>
-        <li><strong>Pages CI</strong> - GitHub workflows for static docs are already present.</li>
-      </ul>
-    </section>
-
-    <section id="contribute" class="panel">
-      <h3>Contribute</h3>
-      <p>Thanks for helping! A CONTRIBUTING.md (recommended) should describe how to run tests, linting and style. Quick pointers:</p>
-      <ul>
-        <li>Create a branch per-change and open a Pull Request against <code>main</code>.</li>
-        <li>Run shellcheck on scripts and cppcheck/clang-tidy on C/C++ code.</li>
-      </ul>
-      <p class="note">Security: audit installer scripts prior to running on production systems.</p>
-    </section>
-
-    <section class="panel footer-cta">
-      <h3>Resources</h3>
-      <div class="links">
-        <a href="README.md">README</a>
-        <a href="server/server.c">Server</a>
-        <a href="Playground.cpp">Playground demo</a>
-        <a href="templates/elf-analyzer/Main.cpp.tpl">ELF template</a>
-        <a href="WEB4_Whitepaper_Complete.mk">Whitepaper</a>
-      </div>
-    </section>
+    <section id="contribute" class="cta-section"><div class="shell cta-inner"><div><p class="eyebrow">05 / CONTRIBUTE</p><h2>Make the universal layer better.</h2><p>Fork, branch, verify, test and open a pull request against <code>main</code>.</p></div><a class="button primary" href="https://github.com/auraecosystem/make.universe/pulls" target="_blank" rel="noopener">Open a pull request ↗</a></div></section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <small>© 2026 Web4application — <a href="LICENSE">MIT</a> · <a href="https://github.com/Web4application/makeuniversal">Repository</a></small>
-    </div>
-  </footer>
-</body>
-</html>
+  <footer class="footer shell"><span>make.universe · universal build infrastructure</span><span><a href="https://github.com/auraecosystem/make.universe" target="_blank" rel="noopener">GitHub</a> · <a href="Docs/">Docs</a> · <a href="https://github.com/auraecosystem/make.universe/issues" target="_blank" rel="noopener">Issues</a></span></footer>
+  <script src="assets/js/app.js"></script>
+</body></html>
