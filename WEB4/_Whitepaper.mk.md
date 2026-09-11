@@ -1,7 +1,7 @@
 # WEB4: A New Paradigm for Trust, Value, and Intelligence
 
 **Authors:** Seriki Walter yakub 
-**AGENTS:** @GPTfamily, @Deepseek, @Grok, @Claude, @Gemini, @llama, @codex
+**AGENTS:** @GPTfamily, @Deepseek, @Grok, @Claude, @Gemini, @llama.cpp, @codex
 **Updated:**  September 10, 2026
 
 ---
@@ -92,7 +92,8 @@ Where specific Synchronism concepts add meaningful depth—such as coherence eth
 
 ## Legal and Organizational Framework
 
-The LCT framework is protected by two issued U.S. patents—[](https://patents.google.com/patent/) and (https://patents.google.com/patent/)—with additional patents pending. These filings ensure the foundational mechanisms are recognized, while preserving the option for wide deployment and public benefit.
+The LCT framework is protected by two issued U.S. patents— 
+[xxxx](https://patents.google.com/patent/) and (https://patents.google.com/patent/)—with additional patents pending. These filings ensure the foundational mechanisms are recognized, while preserving the option for wide deployment and public benefit.
 
 Funding for portions of this research and development has been provided by **MetaLINNX, Inc.**, which supports the evolution of decentralized, trust-based systems and the public infrastructure required to sustain them.
 
