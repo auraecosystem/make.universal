@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "advisories": [
+    {"id":"VU-952657","source":"CERT/CC","status":"catalog-entry"},
+    {"id":"CVE-2024-12084","source":"CVE","status":"catalog-entry"},
+    {"id":"CVE-2024-12085","source":"CVE","status":"catalog-entry"},
+    {"id":"CVE-2024-12086","source":"CVE","status":"catalog-entry"},
+    {"id":"CVE-2024-12087","source":"CVE","status":"catalog-entry"},
+    {"id":"CVE-2024-12088","source":"CVE","status":"catalog-entry"},
+    {"id":"CVE-2024-12747","source":"CVE","status":"catalog-entry"}
+  ]
+}

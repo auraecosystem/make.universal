@@ -1,0 +1,1 @@
+{"schema":"https://ossf.github.io/osv-schema/","id":"make-universal-rsync-catalog","modified":"1970-01-01T00:00:00Z","package":{"ecosystem":"generic","name":"rsync"},"affected":[],"database_specific":{"status":"catalog-only"}}
