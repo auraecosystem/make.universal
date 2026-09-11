@@ -1,0 +1,22 @@
+name: signing
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  sign:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install cosign
+        uses: sigstore/cosign-installer@v3
+      - name: Sign release artifacts
+        if: github.event_name == 'release'
+        run: |
+          mkdir -p security/manifests
+          find dist -type f -print0 | xargs -0 -r sha256sum > security/manifests/SHA256SUMS
+          find dist -type f -print0 | xargs -0 -r sha512sum > security/manifests/SHA512SUMS
+          cosign sign-blob --yes security/manifests/SHA256SUMS --bundle security/manifests/SHA256SUMS.sigstore.json

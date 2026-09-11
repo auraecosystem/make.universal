@@ -1,0 +1,28 @@
+name: security
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '17 3 * * *'
+permissions:
+  contents: read
+  security-events: write
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.x'}
+      - name: Generate OSV index
+        run: python3 tools/security/osv.py
+      - name: Scan
+        run: python3 tools/security/scan.py
+      - name: SARIF
+        run: python3 tools/security/sarif.py
+      - name: SBOM
+        run: python3 tools/security/sbom.py
+      - name: Upload SARIF
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: sarif/rsync.sarif
