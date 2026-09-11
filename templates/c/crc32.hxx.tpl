@@ -1,0 +1,1 @@
+#ifndef {{PROJECT_GUARD}}_CRC32_H #define {{PROJECT_GUARD}}_CRC32_H #include <stddef.h> #include <stdint.h> #ifdef __cplusplus extern "C" { #endif uint32_t crc32(const void *data, size_t length); #ifdef __cplusplus } #endif #endif
