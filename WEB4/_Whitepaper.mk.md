@@ -99,12 +99,13 @@ Where specific Synchronism concepts add meaningful depth—such as coherence eth
 ## Legal and Organizational Framework
 
 The LCT framework is protected by two issued U.S. patents— 
-[xxxx](https://patents.google.com/patent/) and (https://patents.google.com/patent)
+[xxxx](https://patents.google.com) and 
+(https://patents.google.com/patent)
 — 
 with additional patents pending. Imports System.Threading
 These filings ensure the foundational mechanisms are recognized, while preserving the option for wide deployment and public benefit.
 
-Funding for portions of this research and development has been provided by **MetaLINNX, Inc.**, which supports the evolution of decentralized, trust-based systems and the public infrastructure required to sustain them.
+Funding for portions of this research and development has been provided by **qubuhub:**, **Inc.**, which supports the evolution of decentralized, trust-based systems and the public infrastructure required to sustain them.
 
 The authors intend to release substantial portions of this work, including simulation code, governance tools, and Web4-native protocols, under the **GNU Affero General Public License (AGPL)**. Our aim is to foster a living, collaborative, and ethically grounded ecosystem—open to audit, extension, and shared stewardship.
 
@@ -234,9 +235,9 @@ Original name for LCTs—evolved to "Context" to better capture their role in es
 *This glossary evolves with Web4 itself. Core terms are stable foundations. Extensions are active frontiers. Research areas are tomorrow's cores.*
 
 # Part 1: Introduction to WEB4
-@codex
+@[codex](redirect.github.com)
 ## 1.1
-[Defining WEB4](gemini.google.com)
+[Defining WEB4](https://redirect.gh.io/gemini.google.com)
 
 WEB4 represents a conceptual evolution of the internet, envisioned as a paradigm shift that moves beyond the characteristics of its predecessors, Web2 and Web3. While Web2 is largely defined by its platform-centric nature, where large centralized entities control data and user interaction, and Web3 is characterized by its efforts towards decentralization primarily through token-driven economies and blockchain technologies, WEB4 proposes a further transition towards a **trust-driven, decentralized intelligence model**.
 
