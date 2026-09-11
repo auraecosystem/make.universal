@@ -1,190 +1,306 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#050914">
-  <meta name="description" content="make.universe — universal build orchestration, developer tooling, security workflows, containers, demos and Web4 infrastructure.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="make.universe — Universal Build Infrastructure">
-  <meta property="og:description" content="Build, verify, secure, package and ship Web4 tooling with one developer-oriented build system.">
-  <meta property="og:image" content="assets/logo.svg">
-  <title>make.universe — Universal Build Infrastructure</title>
-  <link rel="icon" href="assets/logo.svg">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="./" aria-label="make.universe home">
-        <img src="assets/logo.svg" alt="" class="logo">
-        <span class="brand-copy">
-          <strong>make.universe</strong>
-          <small>Universal build infrastructure</small>
-        </span>
-      </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#quickstart">Quickstart</a>
-        <a href="#capabilities">Capabilities</a>
-        <a href="#security">Security</a>
-        <a href="#resources">Resources</a>
-        <a href="https://github.com/auraecosystem/make.universe">GitHub</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="eyebrow"><span class="pulse"></span> WEB4 · BUILD · VERIFY · SHIP</div>
-          <h1>One build surface for a <span>universal</span> toolchain.</h1>
-          <p class="lead">make.universe brings Make, Docker, C/C++, scripting, security scanning, packaging and release automation into one developer-oriented build layer for the Web4 ecosystem.</p>
-          <div class="cta">
-            <a class="btn primary" href="#quickstart">Start building</a>
-            <a class="btn" href="https://github.com/auraecosystem/make.universe">Open repository ↗</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#0d47a1" />
+    
+    <!-- SEO & Social -->
+    <title>makeuniversal — Web4 build & tooling</title>
+    <meta name="description" content="makeuniversal: mixed Makefile/C++/Shell toolkit for Web4. Build containers, run demos, and explore ELF analysis and proxy examples." />
+    <meta name="keywords" content="Web4, build system, C++, Makefile, containers, ELF analysis, open source" />
+    <meta name="author" content="Web4 Project" />
+    
+    <meta property="og:title" content="makeuniversal" />
+    <meta property="og:description" content="Mixed Makefile/C++/Shell toolkit and demos for Web4." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://github.com/auraecosystem/make.universe" />
+    <meta property="og:image" content="assets/logo.svg" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="makeuniversal" />
+    <meta name="twitter:description" content="Web4 universal build tooling & demos" />
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="dns-prefetch" href="https://github.com" />
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+    <link rel="apple-touch-icon" href="assets/logo.svg" />
+    
+    <!-- Stylesheets -->
+    <!-- Pico CSS: minimal, classless framework with excellent defaults -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    
+    <!-- Custom theme overrides -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    
+    <!-- Syntax highlighting (Prism) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" />
+    
+    <!-- Smooth scroll & animations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  </head>
+  
+  <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="site-header" role="banner">
+      <div class="container">
+        <nav class="header-nav">
+          <div class="brand">
+            <a href="/" class="brand-link" aria-label="makeuniversal home">
+              <img src="assets/logo.svg" alt="" class="logo" width="48" height="48" />
+              <div class="brand-text">
+                <strong>makeuniversal</strong>
+                <small>Web4 build & tooling</small>
+              </div>
+            </a>
           </div>
-          <div class="trust-row" aria-label="Project characteristics">
-            <span>Open source</span><span>Docker-ready</span><span>Security-aware</span><span>GitHub Pages</span>
+          
+          <ul role="list" class="nav-menu">
+            <li><a href="#quickstart">Quickstart</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#contribute">Contribute</a></li>
+            <li>
+              <a href="https://github.com/auraecosystem/make.universe" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository">
+                GitHub
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- Hero Section -->
+      <section class="hero" data-aos="fade-up">
+        <div class="container">
+          <h1>Build, analyze, and deploy Web4 tooling</h1>
+          <p class="lead">
+            makeuniversal combines <strong>Makefile orchestration</strong>, <strong>C/C++ demos</strong>, 
+            <strong>installer scripts</strong>, and <strong>docs</strong> to help you prototype Web4 components.
+          </p>
+          
+          <div class="cta-group">
+            <a href="#quickstart" class="btn btn-primary">Get started</a>
+            <a href="https://github.com/auraecosystem/make.universe" class="btn" target="_blank" rel="noopener noreferrer">
+              View on GitHub ↗
+            </a>
           </div>
         </div>
+      </section>
 
-        <div class="terminal" aria-label="make.universe command preview">
-          <div class="terminal-bar"><i></i><i></i><i></i><span>make.universe / terminal</span></div>
-          <pre><code><b>$ make help</b>
-make.universe
+      <!-- Quickstart Section -->
+      <section id="quickstart" class="panel" data-aos="fade-up">
+        <div class="container">
+          <h2>Quickstart</h2>
+          <p>Two fast ways to try the project: containerized builds or local/native builds.</p>
+          
+          <div class="quickstart-grid">
+            <!-- Containerized -->
+            <article class="card">
+              <h3>🐳 Containerized (Docker)</h3>
+              <p>Build optimized container images for Node and Python development environments.</p>
+              
+              <pre><code class="language-bash">make node
+make python</code></pre>
+              
+              <p class="note">
+                <strong>Requires:</strong> Docker installed locally or in your environment.
+              </p>
+            </article>
 
-Targets:
-  build       Build all images
-  node        Build Node image
-  python      Build Python image
-  test        Run tests
-  lint        Run linter
-  verify      Verify project
-  security    Run security scans
-  package     Build release package
-  release     Complete release pipeline
+            <!-- Native C Demo -->
+            <article class="card">
+              <h3>⚙️ Native C Demo</h3>
+              <p>Build a lightweight TCP server and explore the gateway demo locally.</p>
+              
+              <pre><code class="language-bash"># Build lightweight server for testing
+gcc -std=c11 -Wall -Wextra -O2 -o server/server server/server.c
 
-<b>$ make verify</b>
-Verification passed: build assets are present.</code></pre>
+# Run
+./server/server</code></pre>
+              
+              <p class="note">
+                <strong>Requires:</strong> gcc/clang, GNU make, and standard POSIX tools.
+              </p>
+            </article>
+
+            <!-- C++ Playground -->
+            <article class="card">
+              <h3>🎮 C++ Playground</h3>
+              <p>Advanced C++ demos that integrate with KLEE and CRAXExpr for constraint solving.</p>
+              
+              <pre><code class="language-bash"># Build inside dev container (recommended)
+docker run -it makeuniversal-dev bash
+make playground</code></pre>
+              
+              <p class="note">
+                <strong>Note:</strong> Requires project dependencies (KLEE, CRAXExpr). Easier inside the container.
+              </p>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="stats" aria-label="Project overview">
-      <div class="container stats-grid">
-        <div><strong>01</strong><span>Unified build surface</span></div>
-        <div><strong>02</strong><span>Containerized environments</span></div>
-        <div><strong>03</strong><span>Security + SBOM workflows</span></div>
-        <div><strong>04</strong><span>Package → sign → publish</span></div>
-      </div>
-    </section>
-
-    <section id="quickstart" class="section">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">01 / QUICKSTART</span>
-          <h2>Go from checkout to build.</h2>
-          <p>The repository's production Makefile exposes the core build, verification, security and release lifecycle.</p>
+      <!-- Features Section -->
+      <section id="features" class="panel features-panel" data-aos="fade-up">
+        <div class="container">
+          <h2>Highlights</h2>
+          
+          <ul role="list" class="features-list">
+            <li data-aos="fade-up" data-aos-delay="50">
+              <strong>📦 Makefile & .mk modules</strong>
+              <p>Orchestration for container builds, templating, and documentation generation.</p>
+            </li>
+            <li data-aos="fade-up" data-aos-delay="100">
+              <strong>💻 C/C++ demos</strong>
+              <p>ELF analyzer templates and TCP gateway with PROXY protocol parsing.</p>
+            </li>
+            <li data-aos="fade-up" data-aos-delay="150">
+              <strong>🚀 Installer scripts</strong>
+              <p>Full Hermes-style environment provisioning in <code>Lmlm.dev/</code>.</p>
+            </li>
+            <li data-aos="fade-up" data-aos-delay="200">
+              <strong>📚 Docs & whitepaper</strong>
+              <p>Architecture notes, diagrams, and comprehensive Web4 whitepaper included.</p>
+            </li>
+            <li data-aos="fade-up" data-aos-delay="250">
+              <strong>🔄 Pages CI</strong>
+              <p>GitHub Actions workflows for automatic static docs deployment.</p>
+            </li>
+            <li data-aos="fade-up" data-aos-delay="300">
+              <strong>🔐 Security-focused</strong>
+              <p>PROXY protocol handling, robust parsing, and auditable installer scripts.</p>
+            </li>
+          </ul>
         </div>
-        <div class="cards two">
-          <article class="card command-card">
-            <div class="card-icon">$</div>
-            <h3>Build containers</h3>
-            <p>Build the Node.js and Python development images defined by the project.</p>
-            <pre><code>make node
-make python
-# or
-make build</code></pre>
+      </section>
+
+      <!-- Security Notice -->
+      <section class="security-panel" data-aos="fade-up">
+        <div class="container">
+          <article class="card warning">
+            <h3>⚠️ Security Notice</h3>
+            <p>
+              This project contains networking code (PROXY protocol parsing) and system-level installer scripts. 
+              <strong>Always audit code before running on production systems.</strong>
+            </p>
+            <ul role="list">
+              <li>Review <code>server/server.c</code> and proxy protocol handling in <code>server/rsc/@stud/Proxy-Protocol.c</code></li>
+              <li>Read <code>Lmlm.dev/install.sh</code> before executing with <code>sudo</code></li>
+              <li>Test in isolated environments first</li>
+            </ul>
           </article>
-          <article class="card command-card">
-            <div class="card-icon">✓</div>
-            <h3>Verify locally</h3>
-            <p>Run the project's native verification, linting and test entry points before release.</p>
-            <pre><code>make verify
-make lint
-make test</code></pre>
+        </div>
+      </section>
+
+      <!-- Resources Section -->
+      <section id="resources" class="panel" data-aos="fade-up">
+        <div class="container">
+          <h2>Resources</h2>
+          <p>Quick links to key project files and documentation.</p>
+          
+          <div class="resources-grid">
+            <a href="README.md" class="resource-card" target="_blank">
+              <strong>📖 README</strong>
+              <small>Project overview and setup guide</small>
+            </a>
+            <a href="server/server.c" class="resource-card" target="_blank">
+              <strong>🖥️ Server</strong>
+              <small>TCP gateway implementation</small>
+            </a>
+            <a href="Playground.cpp" class="resource-card" target="_blank">
+              <strong>🎮 Playground</strong>
+              <small>C++ demo with KLEE/CRAXExpr</small>
+            </a>
+            <a href="templates/elf-analyzer/Main.cpp.tpl" class="resource-card" target="_blank">
+              <strong>⚙️ ELF Template</strong>
+              <small>ELF analyzer template</small>
+            </a>
+            <a href="WEB4_Whitepaper_Complete.mk" class="resource-card" target="_blank">
+              <strong>📄 Whitepaper</strong>
+              <small>Web4 architecture & design</small>
+            </a>
+            <a href="docs/" class="resource-card" target="_blank">
+              <strong>📚 Docs</strong>
+              <small>Full documentation site</small>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contribute Section -->
+      <section id="contribute" class="panel contribute-panel" data-aos="fade-up">
+        <div class="container">
+          <h2>Contribute</h2>
+          <p>We welcome contributions! Here's how to get started.</p>
+          
+          <article>
+            <h3>Development Workflow</h3>
+            <ol role="list">
+              <li>Fork the repository on GitHub</li>
+              <li>Create a feature branch: <code>git checkout -b feature/your-feature</code></li>
+              <li>Make your changes and test thoroughly</li>
+              <li>Run linting and analysis:
+                <ul role="list">
+                  <li><code>shellcheck</code> on shell scripts</li>
+                  <li><code>cppcheck</code> or <code>clang-tidy</code> on C/C++ code</li>
+                </ul>
+              </li>
+              <li>Commit with clear, descriptive messages</li>
+              <li>Push to your fork and open a Pull Request against <code>main</code></li>
+            </ol>
           </article>
-        </div>
-      </div>
-    </section>
 
-    <section id="capabilities" class="section section-alt">
+          <article>
+            <h3>Code Standards</h3>
+            <ul role="list">
+              <li><strong>C/C++:</strong> Follow ISO C11/C17 and modern C++ practices</li>
+              <li><strong>Shell:</strong> POSIX-compliant, ShellCheck-clean scripts</li>
+              <li><strong>Makefile:</strong> Portable, well-documented targets</li>
+              <li><strong>Documentation:</strong> Clear README sections, inline comments for complex logic</li>
+            </ul>
+          </article>
+
+          <p class="note">
+            Please see <code>CONTRIBUTING.md</code> for detailed guidelines on testing, commit messages, and PR expectations.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
       <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">02 / CAPABILITIES</span>
-          <h2>Designed as a build control plane.</h2>
-          <p>make.universe is more than a collection of demos: its Makefile defines an explicit path from source to verified release artifacts.</p>
-        </div>
-        <div class="capability-grid">
-          <article class="capability"><span>01</span><h3>Build orchestration</h3><p>Coordinate Docker images and project build assets through predictable Make targets.</p></article>
-          <article class="capability"><span>02</span><h3>Developer tooling</h3><p>Use <code>mu</code> as the project command surface for formatting, linting, testing and packaging.</p></article>
-          <article class="capability"><span>03</span><h3>C / C++ gateway</h3><p>The server demo provides a lightweight TCP gateway with PROXY protocol handling.</p></article>
-          <article class="capability"><span>04</span><h3>Documentation</h3><p>Architecture, installation, API and development material live under <code>Docs/</code>.</p></article>
-          <article class="capability"><span>05</span><h3>Automation</h3><p>GitHub Actions workflows cover CI, Make builds, Pages and related project publishing.</p></article>
-          <article class="capability"><span>06</span><h3>Release pipeline</h3><p>Run format → lint → test → verify → security → package → sign → publish with <code>make release</code>.</p></article>
-        </div>
+        <p>
+          <small>
+            © <span id="year">2026</span> Web4 Project &nbsp;•&nbsp; 
+            <a href="LICENSE">MIT License</a> &nbsp;•&nbsp; 
+            <a href="https://github.com/auraecosystem/make.universe" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+          </small>
+        </p>
       </div>
-    </section>
+    </footer>
 
-    <section id="security" class="section">
-      <div class="container security-layout">
-        <div>
-          <span class="section-kicker">03 / SECURITY</span>
-          <h2>Security is a build stage, not an afterthought.</h2>
-          <p>The current Makefile exposes CVE and OSV scanning, SBOM generation, SARIF generation, HTML security reporting and a secure-update path.</p>
-          <div class="security-tags"><span>CVE</span><span>OSV</span><span>SBOM</span><span>SARIF</span><span>HTML REPORT</span></div>
-        </div>
-        <div class="security-console">
-          <pre><code>make security
-
-→ security-cve
-→ security-osv
-→ security-sbom
-→ security-sarif
-→ security-report
-
-# remediation
-make security-fix</code></pre>
-        </div>
-      </div>
-    </section>
-
-    <section id="resources" class="section section-alt">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">04 / RESOURCES</span>
-          <h2>Everything close to the source.</h2>
-        </div>
-        <div class="resource-grid">
-          <a class="resource" href="README.md"><strong>README</strong><span>Project overview and developer entry point ↗</span></a>
-          <a class="resource" href="Docs/Getting-started.md"><strong>Getting Started</strong><span>Installation and first-run guidance ↗</span></a>
-          <a class="resource" href="Docs/Dev.html.md"><strong>Developer Docs</strong><span>Development notes and implementation material ↗</span></a>
-          <a class="resource" href="Docs/api.md"><strong>API Notes</strong><span>Repository API documentation ↗</span></a>
-          <a class="resource" href="server/server.c"><strong>Gateway Server</strong><span>C TCP gateway implementation ↗</span></a>
-          <a class="resource" href="makefile"><strong>Production Makefile</strong><span>Build and release control surface ↗</span></a>
-          <a class="resource" href=".github/workflows/Ci.yml"><strong>CI Workflow</strong><span>Continuous integration configuration ↗</span></a>
-          <a class="resource" href="https://github.com/auraecosystem/make.universe/issues"><strong>Issues</strong><span>Report bugs and propose improvements ↗</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section contribute">
-      <div class="container contribute-inner">
-        <div><span class="section-kicker">05 / CONTRIBUTE</span><h2>Build the universal layer with us.</h2><p>Create a focused branch, run verification and security checks, then open a pull request against <code>main</code>.</p></div>
-        <a class="btn primary" href="https://github.com/auraecosystem/make.universe/pulls">Open a pull request ↗</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="brand footer-brand"><img src="assets/logo.svg" alt="" class="logo"><span><strong>make.universe</strong><small>Universal build infrastructure for Web4</small></span></div>
-      <div class="footer-links"><a href="https://github.com/auraecosystem/make.universe">GitHub</a><a href="Docs/Getting-started.md">Docs</a><a href="https://github.com/auraecosystem/make.universe/issues">Issues</a></div>
-      <small>© 2026 auraecosystem · Open source project</small>
-    </div>
-  </footer>
-</body>
+    <!-- Scripts -->
+    <!-- Scroll-triggered animations (AOS) -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js" defer></script>
+    
+    <!-- Syntax highlighting (Prism) -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-c.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-cpp.min.js" defer></script>
+    
+    <!-- App initialization -->
+    <script src="assets/js/app.js" defer></script>
+  </body>
 </html>
