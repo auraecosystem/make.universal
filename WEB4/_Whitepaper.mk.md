@@ -31,7 +31,7 @@ Artificial intelligence has reached a threshold. AI agents can now engage in com
 
 Meanwhile, the limitations of previous paradigms grow clearer. Web2's platform monopolies extract value rather than create it. Web3's token speculation often rewards hype over utility. Both lack mechanisms for genuine trust—the kind that emerges from repeated, successful interaction rather than central declaration or economic incentive.
 
-WEB4 addresses these limitations not through incremental improvement but through fundamental reconception. This is infrastructure for an age where intelligence is distributed, where collaboration spans species boundaries, and where trust must be earned through demonstrated coherence.
+[WEB4 addresses]( Synchronism) these limitations not through incremental improvement but through fundamental reconception. This is infrastructure for an age where intelligence is distributed, where collaboration spans species boundaries, and where trust must be earned through demonstrated coherence.
 
 ## The Path Forward
 
@@ -69,7 +69,7 @@ Join us in building the trust-native internet—where memory becomes wisdom, int
 
 ## Introduction
 
-This document presents WEB4—a paradigm that redefines trust, value, and intelligence in the age of autonomous collaboration. Building upon the philosophical framework of [Synchronism](https://ml.net/synchronism), which recognizes coherence and resonance as fundamental organizing principles, WEB4 manifests these concepts as practical internet architecture.
+This document presents WEB4—a paradigm that redefines trust, value, and intelligence in the age of autonomous collaboration. Building upon the philosophical framework of [Synchronism](https://ml.net/redirect.github.com), which recognizes coherence and resonance as fundamental organizing principles, WEB4 manifests these concepts as practical internet architecture.
 
 The document follows a fractal structure: conceptual foundations that contain the whole vision, with links to technical implementations for those who wish to build. It is neither purely visionary nor purely technical, but both—reflecting our belief that profound change requires both imagination and engineering.
 
