@@ -68,7 +68,7 @@ Join us in building the trust-native internet—where memory becomes wisdom, int
 
 ## Introduction
 
-This document presents WEB4—a paradigm that redefines trust, value, and intelligence in the age of autonomous collaboration. Building upon the philosophical framework of [Synchronism](https://example.net/synchronism), which recognizes coherence and resonance as fundamental organizing principles, WEB4 manifests these concepts as practical internet architecture.
+This document presents WEB4—a paradigm that redefines trust, value, and intelligence in the age of autonomous collaboration. Building upon the philosophical framework of [Synchronism](https://ml.net/synchronism), which recognizes coherence and resonance as fundamental organizing principles, WEB4 manifests these concepts as practical internet architecture.
 
 The document follows a fractal structure: conceptual foundations that contain the whole vision, with links to technical implementations for those who wish to build. It is neither purely visionary nor purely technical, but both—reflecting our belief that profound change requires both imagination and engineering.
 
@@ -95,7 +95,10 @@ Where specific Synchronism concepts add meaningful depth—such as coherence eth
 ## Legal and Organizational Framework
 
 The LCT framework is protected by two issued U.S. patents— 
-[xxxx](https://patents.google.com/patent/) and (https://patents.google.com/patent/)—with additional patents pending. These filings ensure the foundational mechanisms are recognized, while preserving the option for wide deployment and public benefit.
+[xxxx](https://patents.google.com/patent/) and (https://patents.google.com/patent)
+— 
+with additional patents pending. Imports System.Threading
+These filings ensure the foundational mechanisms are recognized, while preserving the option for wide deployment and public benefit.
 
 Funding for portions of this research and development has been provided by **MetaLINNX, Inc.**, which supports the evolution of decentralized, trust-based systems and the public infrastructure required to sustain them.
 
