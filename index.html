@@ -46,6 +46,42 @@ Targets
     <section id="quickstart" class="section shell"><div class="section-head"><p class="eyebrow">01 / QUICKSTART</p><h2>From clone to verified build.</h2><p>Use the production Makefile for the project pipeline, or use <code>build.mu</code> as the declarative universal specification.</p></div>
       <div class="command-grid"><article class="command-card"><span>01</span><h3>Build containers</h3><p>Build the Node and Python development images.</p><button data-command="make build">make build</button></article><article class="command-card"><span>02</span><h3>Verify configuration</h3><p>Check <code>build.mu</code>, Dockerfiles and build configuration.</p><button data-command="make verify">make verify</button></article><article class="command-card"><span>03</span><h3>Run quality gates</h3><p>Format, lint, test and verify before release.</p><button data-command="make format &amp;&amp; make lint &amp;&amp; make test">make lint &amp;&amp; make test</button></article><article class="command-card"><span>04</span><h3>Run security</h3><p>Generate vulnerability, SBOM and SARIF reporting.</p><button data-command="make security">make security</button></article></div>
       <div class="copy-console" aria-live="polite"><span>$</span><code id="command-output">make verify</code><button id="copy-command" type="button">Copy</button></div>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>makeuniversal | Web4 build & tooling</title>
+  <meta name="description" content="makeuniversal — mixed Makefile/C++/Shell toolkit and demos for Web4project. Build containers, run demos, and explore the ELF analysis and proxy examples." />
+  <meta property="og:title" content="makeuniversal" />
+  <meta property="og:description" content="Mixed Makefile/C++/Shell toolkit and demos for Web4project." />
+  <link rel="icon" href="assets/logo.svg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <img src="assets/logo.svg" alt="makeuniversal logo" class="logo" />
+        <div class="brand-text">
+          <h1>makeuniversal</h1>
+          <p class="tagline">Universal build tooling, demos and docs for the Web4 project</p>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="#quickstart">Quickstart</a>
+        <a href="#features">Features</a>
+        <a href="docs/getting-started.md">Docs</a>
+        <a href="#contribute">Contribute</a>
+      </nav>
+    </div>
+  </header>
+<!- -!>
+  <main class="container">
+    <section class="hero">
+      <h2>Build, analyze, and deploy Web4 tooling</h2>
+      <p class="lead">makeuniversal combines Makefile orchestration, C/C++ demos, installer scripts, and docs to help you prototype Web4 components.</p>
+      <div class="cta">
+        <a class="btn primary" href="#quickstart">Get started</a>
+        <a class="btn" href="https://github.com/Web4application/makeuniversal">View on GitHub</a>
+      </div>
     </section>
 
     <section id="architecture" class="section section-dark"><div class="shell"><div class="section-head"><p class="eyebrow">02 / ARCHITECTURE</p><h2>The specification is the map.</h2><p>The checked-in <code>build.mu</code> describes project identity, language rules, sources, outputs, platforms, testing, security, containers, packages and release policy.</p></div><div class="architecture-grid"><div class="arch-node active"><b>build.mu</b><small>declarative source of truth</small></div><div class="arch-arrow">→</div><div class="arch-stack"><div><b>Compiler</b><small>clang / C17 / O2</small></div><div><b>Platforms</b><small>macOS · Linux · Windows</small></div><div><b>Containers</b><small>Node · Python</small></div></div><div class="arch-arrow">→</div><div class="arch-stack"><div><b>Quality</b><small>CTest · coverage · verify</small></div><div><b>Security</b><small>CVE · OSV · SBOM · SARIF</small></div><div><b>Release</b><small>sign · provenance · checksums</small></div></div></div></div></section>
