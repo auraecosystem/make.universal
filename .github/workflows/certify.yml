@@ -1,0 +1,21 @@
+name: Certify
+
+on:
+  push:
+    branches: ["main", "repair/**"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  validate-certification:
+    name: Validate Certify.srf
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate certification contract
+        run: make validate
