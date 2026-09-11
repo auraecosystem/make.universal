@@ -1,5 +1,9 @@
-$ curl https://yangcatalog.org/api/search/vendors
-$ curl https://yangcatalog.org/api/search/catalog
+git branch -m Makeuniversal.github.io base
+git fetch origin
+git branch -u origin/base base
+git remote set-head origin -a
+curl https://yangcatalog.org/api/search/vendors
+curl https://yangcatalog.org/api/search/catalog
 python3 build_model_maker_api_docs.mk --output_dir=./docs/api
 # Install mdbook (example)
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf -y | sh
