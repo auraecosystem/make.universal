@@ -1,0 +1,1 @@
+project "{{PROJECT_NAME}}" { language = "c" standard = "c17" compiler = "{{CC}}" flags = [ "{{CFLAGS}}" ] sources = [ "{{SOURCES}}" ] build { command = "make" } run { command = "./{{PROJECT_NAME}}" } clean { command = "make clean" } }
