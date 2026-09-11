@@ -1,5 +1,5 @@
-$ curl https://yangcatalog.org/api/search/vendors
-$ curl https://yangcatalog.org/api/search/catalog
+curl https://yangcatalog.org/api/search/vendors
+curl https://yangcatalog.org/api/search/catalog
 python3 build_model_maker_api_docs.mk --output_dir=./docs/api
 # Install mdbook (example)
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf -y | sh
@@ -49,3 +49,5 @@ cat Lmlm.dev/install.sh
 bash Lmlm.dev/install.sh
 curl -fsSL https://raw.githubusercontent.com/continuedev/continue/main/extensions/cli/scripts/install.sh | bash
 
+docker build -f images/node.Dockerfile -t auraecosystem/make.universal-node:latest .
+docker build -f images/python.Dockerfile -t auraecosystem/make.universal-python:latest .
