@@ -9,9 +9,12 @@ $ mkdir -p ~/.config/fish/completions
 $ rustup completions fish > ~/.config/fish/completions/rustup.fish
 
 # Zsh
-$ rustup completions zsh > ~/.zfunc/_rustup
+$ rustup completions zsh cargo > ~/.zfunc/_cargo
 
-# PowerShell v5.0+
+rm -f ~/.zcompdump; compinit
+source ~/.zshrc
+
+# PowerShell 
 $ rustup completions powershell >> $PROFILE.CurrentUserCurrentHost
 # or
 $ rustup completions powershell | Out-String | Invoke-Expression
