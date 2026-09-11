@@ -1,0 +1,1 @@
+CC = {{CC}} CFLAGS = {{CFLAGS}} TARGET = {{PROJECT_NAME}} SOURCES = {{SOURCES}} all: $(TARGET) $(TARGET): $(SOURCES) $(CC) $(CFLAGS) $(SOURCES) -o $(TARGET) run: $(TARGET) ./$(TARGET) clean: rm -f $(TARGET) .PHONY: all run clean
