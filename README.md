@@ -1,8 +1,11 @@
 # makeuniversal
 
 makeuniversal is a mixed build/tooling repository containing C/C++ demos, Makefile-based build orchestration, installer scripts, templates, and documentation for the Web4 project ecosystem.
-
-This README provides a brief overview and [] to get [developers](curlhub.sh) started.
+[make.universe](index.html)
+This README provides a brief overview and 
+[QuickStart](https://continue.dev/)
+[servers](https://mcpservers.org/)
+to get [developers](curlhub.sh) started.
 
 ## Contents
 
