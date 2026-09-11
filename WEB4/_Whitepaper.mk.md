@@ -1,8 +1,8 @@
 # WEB4: A New Paradigm for Trust, Value, and Intelligence
 
-**Authors:** Dennis Palatov, GPT4o, Deepseek, Grok, Claude, Gemini, Manus
-
-**Updated:** August 18, 2025
+**Authors:** Seriki Walter yakub 
+**AGENTS:** @GPTfamily, @Deepseek, @Grok, @Claude, @Gemini, @llama, @codex
+**Updated:**  September 10, 2026
 
 ---
 
@@ -92,7 +92,7 @@ Where specific Synchronism concepts add meaningful depth—such as coherence eth
 
 ## Legal and Organizational Framework
 
-The LCT framework is protected by two issued U.S. patents—[US11477027](https://patents.google.com/patent/US11477027B1) and [US12278913](https://patents.google.com/patent/US12278913B1)—with additional patents pending. These filings ensure the foundational mechanisms are recognized, while preserving the option for wide deployment and public benefit.
+The LCT framework is protected by two issued U.S. patents—[](https://patents.google.com/patent/) and (https://patents.google.com/patent/)—with additional patents pending. These filings ensure the foundational mechanisms are recognized, while preserving the option for wide deployment and public benefit.
 
 Funding for portions of this research and development has been provided by **MetaLINNX, Inc.**, which supports the evolution of decentralized, trust-based systems and the public infrastructure required to sustain them.
 
@@ -102,7 +102,7 @@ The authors intend to release substantial portions of this work, including simul
 
 To participate in ongoing development or collaborative application of the WEB4 framework, please contact:
 
-📩 **dp@metalinxx.io**
+📩 **hello@web4app.io**
 
 We invite thoughtful critique, aligned contribution, and resonant imagination. This is not a finished system but a living framework, evolving through the contributions of all who engage with it.
 
@@ -202,7 +202,7 @@ The lightweight verification backbone of Web4. Child entities send minimal witne
 *Emerging concepts under active exploration—the frontier of Web4.*
 
 ### Synchronism
-The philosophical framework underlying Web4—recognizing coherence, resonance, and shared intent as fundamental organizing principles. See [https://dpcars.net/synchronism](https://dpcars.net/synchronism) for deeper exploration.
+The philosophical framework underlying Web4—recognizing coherence, resonance, and shared intent as fundamental organizing principles. See [https://web4.0/synchronism](https://example.net/synchronism) for deeper exploration.
 
 ### Fractal Organization
 The principle that patterns repeat at every scale—from individual memories to global trust networks. What works at cell level scales to planetary level through the same fundamental mechanisms.
