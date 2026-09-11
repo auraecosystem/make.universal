@@ -40,7 +40,7 @@ bun install turbo --global
 bun install turbo --dev
 mu init cpp MyApp
 docker run -d -e JUPYTER_PASSWORD="mypassword" \
-  -p 8888:8888 -p 8000:8000 -p 2222:22 \
+  -p 8888:8888 -p 8080:8080 -p 2222:22 \
   -v $(pwd)/work:/workspace/work \
   --gpus all \
   unsloth/unsloth
@@ -53,5 +53,5 @@ cat Lmlm.dev/install.sh
 bash Lmlm.dev/install.sh
 curl -fsSL https://raw.githubusercontent.com/continuedev/continue/main/extensions/cli/scripts/install.sh | bash
 
-git clone https://github.com/auraecosystem/make.universal.git
-cd make.universal
+git clone https://github.com/auraecosystem/make.universe.git
+cd make.universe
