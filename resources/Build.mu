@@ -1,6 +1,6 @@
 manifest "1.0"
 project {
-    name        = "my-webapp"
+    name        = "makeuniversal"
     version     = "1.0.0"
     description = "Universal cross-platform application"
     author      = "Seriki Yakub"
