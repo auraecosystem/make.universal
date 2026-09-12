@@ -6,7 +6,10 @@ cd turbo.build
 pnpm add turbo --global
 # Install in repository
 pnpm add turbo --save-dev --workspace-root
-
+# Show actual commands users should run:
+make node
+make python
+./server/server
 # Global install
 bun install turbo --global
 # Install in repository

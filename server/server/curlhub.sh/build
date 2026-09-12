@@ -1,0 +1,5 @@
+# Build lightweight server for testing
+mkdir -p server
+gcc -std=c11 -Wall -Wextra -Wpedantic -O2 \
+    -o server/server \
+    server/server.c

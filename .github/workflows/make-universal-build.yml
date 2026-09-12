@@ -3,18 +3,18 @@ name: make.universal build
 on:
   push:
     branches:
-      - Makeuniversal.github.io
+      - main
       - repair/**
   pull_request:
     branches:
-      - Makeuniversal.github.io
+      - redirect.github.io
 
 jobs:
   build-verify:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Build
         run: make build
